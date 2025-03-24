@@ -71,4 +71,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add scroll event listener
     window.addEventListener('scroll', checkScroll);
     checkScroll(); // Check on load
+     // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('nav');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    }
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 900) {
+                nav.classList.remove('active');
+            }
+        });
+    });
 });
