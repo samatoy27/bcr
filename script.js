@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle functionality
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    
+    if (menuToggle && mainNav) {
+        // Toggle menu when hamburger icon is clicked
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            console.log('Menu toggled!'); // For debugging
+        });
+        
+        // Close menu when a navigation link is clicked
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 900) {
+                    mainNav.classList.remove('active');
+                }
+            });
+        });
+    }
     // Form submission handler
     const appointmentForm = document.getElementById('appointment-form');
     if (appointmentForm) {
