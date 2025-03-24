@@ -133,19 +133,36 @@ header .container {
     align-items: center;
 }
 
+/* Logo styling - ADJUSTED SIZES */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    max-height: 75px;
+    max-height: 70px; /* Increased from previous value */
+    width: auto;
     margin-right: 15px;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
+}
+
+/* Mobile responsiveness for logo */
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 45px; /* Increased for mobile too */
+    }
+    
+    .logo-text h1 {
+        font-size: 1.4rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.8rem;
+    }
 }
 
 nav ul {
