@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Cliff Revival - Professional Leather Restoration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Blue Cliff Revival</h1>
+                <p>Professional Leather Restoration</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#appointments" class="btn">Book Now</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Breathe New Life Into Your Leather</h2>
+            <p>Expert restoration and repair services for all your cherished leather goods</p>
+            <a href="#appointments" class="btn">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Leather Repair</h3>
+                    <p>Fix tears, holes, and damage to extend the life of your leather items.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Color Restoration</h3>
+                    <p>Bring back the original color or change to a new one.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Conditioning</h3>
+                    <p>Deep conditioning treatments to soften and revitalize dry leather.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Work</h3>
+                    <p>Specialized restoration for vintage, antique, or unique leather pieces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Before & After Gallery</h2>
+            <p>See the transformation of our recent projects</p>
+            <div class="gallery-grid">
+                <!-- Image placeholders - replace with actual before/after images -->
+                <div class="gallery-item">
+                    <div class="before-after">
+                        <div class="before">Before</div>
+                        <div class="after">After</div>
+                    </div>
+                    <p>Vintage Leather Sofa Restoration</p>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Blue Cliff Revival</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded with a passion for preserving and restoring leather goods, Blue Cliff Revival has been breathing new life into cherished leather items since [Year].</p>
+                    <p>Our master craftspeople combine traditional techniques with modern methods to deliver exceptional restoration services for all types of leather goods.</p>
+                </div>
+                <!-- Placeholder for about image -->
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"The work done on my vintage leather jacket was incredible. It looks better than when I first bought it!"</p>
+                    <cite>— Sarah M.</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"I thought my leather sofa was beyond repair, but Blue Cliff Revival made it look brand new. Exceptional service!"</p>
+                    <cite>— Michael T.</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointments" class="appointments">
+        <div class="container">
+            <h2>Schedule an Appointment</h2>
+            <p>Let us know what you need restored and when you'd like to bring it in.</p>
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <select id="time" name="time" required>
+                        <option value="">Select a time</option>
+                        <option value="morning">Morning (9AM-12PM)</option>
+                        <option value="afternoon">Afternoon (1PM-5PM)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="repair">Leather Repair</option>
+                        <option value="color">Color Restoration</option>
+                        <option value="conditioning">Conditioning</option>
+                        <option value="custom">Custom Work</option>
+                        <option value="other">Other (please specify)</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Tell us about your item</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Request Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>123 Artisan Street<br>Craftsville, ST 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@bluecliffrevival.com">info@bluecliffrevival.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Hours</h3>
+                        <p>Monday-Friday: 9am-5pm<br>Saturday: 10am-2pm<br>Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="map">
+                    <!-- Placeholder for map - can be replaced with an actual map embed -->
+                    <div class="map-placeholder">Map Location</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Blue Cliff Revival</h3>
+                    <p>Professional Leather Restoration</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#appointments">Appointments</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Pinterest">PIN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Blue Cliff Revival. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
