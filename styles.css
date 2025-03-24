@@ -471,3 +471,27 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 40px; /* Smaller logo on mobile */
+    }
+    
+    .logo h1 {
+        font-size: 1.4rem; /* Smaller heading on mobile */
+    }
+    
+    .logo p {
+        font-size: 0.8rem; /* Smaller tagline on mobile */
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 35px; /* Even smaller logo on very small screens */
+    }
+    
+    .logo-text {
+        max-width: 70%; /* Ensure text doesn't overflow */
+    }
+}
