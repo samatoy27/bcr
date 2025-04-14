@@ -1,7 +1,7 @@
 :root {
     --cream: #f8f4e9;
-    --blue: #2a5d8a;
-    --dark-blue: #1a3a5a;
+    --blue: #23313e;  /* Changed from #2a5d8a */
+    --dark-blue: #1a2631;  /* Slightly darker version of new color */
     --text: #333333;
     --light-gray: #eaeaea;
 }
