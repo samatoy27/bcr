@@ -3,230 +3,619 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Cliff Revival - Professional Leather Restoration</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Blue Cliff Revival | Leather Repair Specialists</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --cream: #f8f4e9;
+            --blue: #2a5d8a;
+            --dark-blue: #1a3a5a;
+            --text: #333333;
+            --light-gray: #eaeaea;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--cream);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-weight: bold;
+            color: var(--blue);
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--blue);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1602879945612-6a67d1c53a1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--blue);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-blue);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--blue);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--blue);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 15px;
+            color: var(--blue);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--blue);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--blue);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--blue);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--cream);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-    <div class="container">
-        <div class="logo">
-            <img src="images/logo.jpg" alt="Blue Cliff Revival Logo">
-            <div class="logo-text">
-                <h1>Blue Cliff Revival</h1>
-                <p>Professional Leather Restoration</p>
-            </div>
-        </div>
-        
-        <!-- This is the hamburger menu button -->
-        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        
-        <!-- This is the navigation menu that should show/hide -->
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#appointments" class="btn">Book Now</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-    <section class="hero">
         <div class="container">
-            <h2>Breathe New Life Into Your Leather</h2>
-            <p>Expert restoration and repair services for all your cherished leather goods</p>
-            <a href="#appointments" class="btn">Schedule a Consultation</a>
+            <nav>
+                <div class="logo">
+                    <img src="BLClogo.png" alt="Blue Cliff Revival Logo">
+                    <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Professional Leather Repair Services</h1>
+            <p>Restoring your leather furniture and car seats to their original beauty with expert craftsmanship and quality materials.</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
         </div>
     </section>
 
-    <section id="services" class="services">
+    <!-- Services Section -->
+    <section id="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Leather Repair</h3>
-                    <p>Fix tears, holes, and damage to extend the life of your leather items.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Color Restoration</h3>
-                    <p>Bring back the original color or change to a new one.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Conditioning</h3>
-                    <p>Deep conditioning treatments to soften and revitalize dry leather.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Custom Work</h3>
-                    <p>Specialized restoration for vintage, antique, or unique leather pieces.</p>
-                </div>
+            <div class="section-title">
+                <h2>Our Services</h2>
             </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Before & After Gallery</h2>
-            <p>See the transformation of our recent projects</p>
-            <div class="gallery-grid">
-                <!-- Image placeholders - replace with actual before/after images -->
-                <div class="gallery-item">
-                    <div class="before-after">
-                        <div class="before">Before</div>
-                        <div class="after">After</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Leather Furniture Repair">
                     </div>
-                    <p>Vintage Leather Sofa Restoration</p>
+                    <div class="service-content">
+                        <h3>Leather Furniture Repair</h3>
+                        <p>We specialize in repairing all types of leather furniture, from sofas to chairs, restoring them to their original condition.</p>
+                    </div>
                 </div>
-                <!-- Add more gallery items as needed -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Car Seat Repair">
+                    </div>
+                    <div class="service-content">
+                        <h3>Leather Car Seat Repair</h3>
+                        <p>Professional repair of damaged, torn, or worn leather car seats to make them look new again.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Upholstery Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Upholstery Services</h3>
+                        <p>Complete upholstery services for both leather and fabric furniture, including reupholstering and restoration.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
-            <h2>About Blue Cliff Revival</h2>
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Founded with a passion for preserving and restoring leather goods, Blue Cliff Revival has been breathing new life into cherished leather items since [Year].</p>
-                    <p>Our master craftspeople combine traditional techniques with modern methods to deliver exceptional restoration services for all types of leather goods.</p>
+                    <h3>Quality Leather Repair Since 2010</h3>
+                    <p>Blue Cliff Revival was founded with a passion for restoring leather goods to their former glory. Our team of skilled craftsmen has decades of combined experience in leather repair and upholstery.</p>
+                    <p>We take pride in using only the highest quality materials and techniques to ensure your leather items look as good as new. Our attention to detail and commitment to customer satisfaction sets us apart from the competition.</p>
+                    <p>Whether it's a family heirloom, your favorite chair, or your car's interior, we treat every project with the care and respect it deserves.</p>
                 </div>
-                <!-- Placeholder for about image -->
-                <div class="about-image"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p>"The work done on my vintage leather jacket was incredible. It looks better than when I first bought it!"</p>
-                    <cite>— Sarah M.</cite>
-                </div>
-                <div class="testimonial">
-                    <p>"I thought my leather sofa was beyond repair, but Blue Cliff Revival made it look brand new. Exceptional service!"</p>
-                    <cite>— Michael T.</cite>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Our Workshop">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="appointments" class="appointments">
+    <!-- Gallery Section -->
+    <section id="gallery">
         <div class="container">
-            <h2>Schedule an Appointment</h2>
-            <p>Let us know what you need restored and when you'd like to bring it in.</p>
-            <form id="appointment-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="section-title">
+                <h2>Our Work</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Leather Repair Before and After">
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Car Seat Repair">
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Leather Sofa Restoration">
                 </div>
-                <div class="form-group">
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date" required>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Upholstery Work">
                 </div>
-                <div class="form-group">
-                    <label for="time">Preferred Time</label>
-                    <select id="time" name="time" required>
-                        <option value="">Select a time</option>
-                        <option value="morning">Morning (9AM-12PM)</option>
-                        <option value="afternoon">Afternoon (1PM-5PM)</option>
-                    </select>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Leather Detail">
                 </div>
-                <div class="form-group">
-                    <label for="service">Service Needed</label>
-                    <select id="service" name="service" required>
-                        <option value="">Select a service</option>
-                        <option value="repair">Leather Repair</option>
-                        <option value="color">Color Restoration</option>
-                        <option value="conditioning">Conditioning</option>
-                        <option value="custom">Custom Work</option>
-                        <option value="other">Other (please specify)</option>
-                    </select>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Finished Project">
                 </div>
-                <div class="form-group full-width">
-                    <label for="message">Tell us about your item</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn">Request Appointment</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-grid">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>Address</h3>
-                        <p>12409 Hatchway Court<br>Woodbridge, Virginia<br>USA</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <p><a href="tel:+12407286033">(240) 728-6033</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p><a href="mailto:bjanat@yahoo.com">bjanat@yahoo.com</a></p>
-                </div>
-                    <div class="contact-item">
-                        <h3>Hours</h3>
-                        <p>Monday-Friday: 9am-5pm<br>Saturday: 10am-2pm<br>Sunday: Closed</p>
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 12409 Hatchway Court</p>
+                        <p><i class="fas fa-phone"></i> 240-728-6033</p>
+                        <p><i class="fas fa-envelope"></i> bluecliffrevival@gmail.com</p>
+                    </div>
+                    <div class="business-hours">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        <p>Sunday: Closed</p>
                     </div>
                 </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/mqapyaev" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" class="form-control">
+                                <option value="furniture">Leather Furniture Repair</option>
+                                <option value="car">Car Seat Repair</option>
+                                <option value="upholstery">Upholstery Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Blue Cliff Revival</h3>
-                    <p>Professional Leather Restoration</p>
+                <div class="logo">
+                    <img src="BLClogo.png" alt="Blue Cliff Revival Logo" style="height: 40px;">
+                    <span class="logo-text" style="color: white;">BLUE CLIFF REVIVAL</span>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#appointments">Appointments</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-yelp"></i></a>
                 </div>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook">FB</a>
-                        <a href="#" aria-label="Instagram">IG</a>
-                        <a href="#" aria-label="Pinterest">PIN</a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Blue Cliff Revival. All rights reserved.</p>
+                <p class="copyright">© 2023 Blue Cliff Revival. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Form submission redirect
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function() {
+                setTimeout(function() {
+                    window.location.href = 'https://www.bluecliffrevival.com/thanks';
+                }, 1000);
+            });
+        }
+    </script>
 </body>
 </html>
