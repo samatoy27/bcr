@@ -1,38 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Thank You</title>
-    <meta http-equiv="refresh" content="5;url=https://www.bluecliffrevival.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Blue Cliff Revival</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: var(--cream);
-            color: var(--blue);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .thank-you-section {
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--cream);
         }
-        .thanks-container {
+        .thank-you-content {
             max-width: 600px;
             margin: 0 auto;
         }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        .thank-you-content h1 {
             color: var(--blue);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
         }
-        p {
+        .thank-you-content p {
+            margin-bottom: 30px;
             font-size: 1.2rem;
-            margin-bottom: 10px;
+        }
+        .countdown {
+            font-size: 1.5rem;
+            color: var(--blue);
+            font-weight: bold;
+            margin-bottom: 30px;
         }
         .btn {
             display: inline-block;
-            margin-top: 20px;
             background-color: var(--blue);
             color: white;
             padding: 12px 30px;
@@ -47,12 +51,56 @@
     </style>
 </head>
 <body>
-    <div class="thanks-container">
-        <h1>Thank You!</h1>
-        <p>Your message has been successfully submitted.</p>
-        <p>We'll get back to you as soon as possible.</p>
-        <p>You will be automatically redirected to our homepage in 5 seconds.</p>
-        <a href="https://www.bluecliffrevival.com" class="btn">Return Home Now</a>
-    </div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
+                    <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="thank-you-content">
+                <h1>Thank You!</h1>
+                <p>Your message has been successfully submitted. We'll get back to you as soon as possible.</p>
+                <div class="countdown" id="countdown">Redirecting in 5 seconds...</div>
+                <a href="index.html" class="btn">Return to Homepage Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo" style="height: 40px;">
+                    <span class="logo-text" style="color: white;">BLUE CLIFF REVIVAL</span>
+                </div>
+                <p class="copyright">© 2023 Blue Cliff Revival. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown timer
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = `Redirecting in ${seconds} second${seconds !== 1 ? 's' : ''}...`;
+            
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
