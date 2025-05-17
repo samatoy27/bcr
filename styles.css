@@ -471,6 +471,14 @@ footer {
     opacity: 0.8;
 }
 
+/* Footer Logo Spacing */
+.footer-logo {
+    margin: 20px 0; /* 20px top and bottom, 0 left and right */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .nav-links {
