@@ -3,24 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Blue Cliff Revival</title>
+    <title>Our Services | Blue Cliff Revival - Leather Repair Specialists</title>
+    <meta name="description" content="Professional leather repair services including furniture restoration, car seat repair, and upholstery services in Woodbridge, VA">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://bluecliffrevival.com/styles.css?v=0.5">
+    <style>
+        /* Additional styles specific to this page */
+        .page-hero {
+            background: linear-gradient(rgba(35, 49, 62, 0.8), rgba(35, 49, 62, 0.8)), 
+                        url('images/service-hero-bg.jpg') center/cover;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .services-list {
+            padding: 80px 0;
+        }
+        
+        .service-category {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .service-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .service-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .service-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-features {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .service-features li {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .service-category {
+                flex-direction: column;
+            }
+            
+            .service-info, .service-image {
+                min-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
-                    <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                    <a href="index.html">
+                        <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
+                        <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                    </a>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services/">Services</a></li>
+                    <li><a href="services/" class="active">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
@@ -33,7 +98,7 @@
     <section class="page-hero">
         <div class="container">
             <h1>Our Services</h1>
-            <p>Comprehensive leather repair and restoration solutions</p>
+            <p>Comprehensive leather repair and restoration solutions in Northern Virginia</p>
         </div>
     </section>
 
@@ -42,60 +107,124 @@
             <div class="service-category">
                 <div class="service-info">
                     <h2>Leather Furniture Repair</h2>
-                    <p>We specialize in repairing all types of leather furniture professionaly!</p>
+                    <p>We specialize in repairing all types of leather furniture professionally, restoring your cherished pieces to their original beauty.</p>
                     <ul class="service-features">
-                        <li>Sofa and chair restoration</li>
-                        <li>Leather recoloring</li>
-                        <li>Structural repairs</li>
+                        <li><i class="fas fa-check-circle"></i> Sofa and chair restoration</li>
+                        <li><i class="fas fa-check-circle"></i> Leather recoloring and conditioning</li>
+                        <li><i class="fas fa-check-circle"></i> Structural repairs and reinforcement</li>
+                        <li><i class="fas fa-check-circle"></i> Scratch and tear repair</li>
                     </ul>
-                    <a href="furniture.html" class="btn">Details</a>
+                    <div class="service-cta">
+                        <a href="furniture-repair.html" class="btn">View Details</a>
+                        <a href="contact.html" class="btn secondary">Get a Quote</a>
+                    </div>
                 </div>
                 <div class="service-image">
-                    <img src="images/leathercouch2after.1.jpg" alt="Furniture repair">
+                    <img src="images/leathercouch2after.jpg" alt="Leather couch after professional repair">
                 </div>
             </div>
-            <div class="service-category">
+            
+            <div class="service-category reverse">
+                <div class="service-image">
+                    <img src="images/car1after.jpg" alt="Car seat after professional repair">
+                </div>
                 <div class="service-info">
                     <h2>Leather & Vinyl Seat Repair</h2>
-                    <p>Cuts, scratches, bumps on your car/boat seat? Don't worry, we do those too!</p>
+                    <p>Cuts, scratches, or wear on your car or boat seats? Our expert repairs will make them look new again.</p>
                     <ul class="service-features">
-                        <li>Car and boat seat repair</li>
-                        <li>Professional work done for dealerships</li>
-                        <li>Structural repair and recoloring</li>
+                        <li><i class="fas fa-check-circle"></i> Car and boat seat repair</li>
+                        <li><i class="fas fa-check-circle"></i> Certified work for dealerships</li>
+                        <li><i class="fas fa-check-circle"></i> Structural repair and recoloring</li>
+                        <li><i class="fas fa-check-circle"></i> Vinyl and leather restoration</li>
                     </ul>
-                    <a href="furniture.html" class="btn">Details</a>
-                </div>
-                <div class="service-image">
-                    <img src="images/car1after.jpg" alt="Seat repair">
+                    <div class="service-cta">
+                        <a href="seat-repair.html" class="btn">View Details</a>
+                        <a href="contact.html" class="btn secondary">Get a Quote</a>
+                    </div>
                 </div>
             </div>
+            
             <div class="service-category">
                 <div class="service-info">
                     <h2>Upholstery Services</h2>
-                    <p>Expert leather and fabric restoration</p>
+                    <p>Complete upholstery solutions for both leather and fabric furniture with expert craftsmanship.</p>
                     <ul class="service-features">
-                        <li>Furniture repair</li>
-                        <li>Fabric restoration</li>
-                        <li>Professional sewing</li>
+                        <li><i class="fas fa-check-circle"></i> Furniture repair and restoration</li>
+                        <li><i class="fas fa-check-circle"></i> Fabric repair and replacement</li>
+                        <li><i class="fas fa-check-circle"></i> Professional sewing and stitching</li>
+                        <li><i class="fas fa-check-circle"></i> Custom upholstery work</li>
                     </ul>
-                    <a href="furniture.html" class="btn">Details</a>
+                    <div class="service-cta">
+                        <a href="upholstery.html" class="btn">View Details</a>
+                        <a href="contact.html" class="btn secondary">Get a Quote</a>
+                    </div>
                 </div>
                 <div class="service-image">
-                    <img src="images/leathercouchafter.jpg" alt="Seat repair">
+                    <img src="images/leathercouchafter.jpg" alt="Upholstery work example">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Restore Your Leather Items?</h2>
+                <p>Contact us today for a free consultation and estimate</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn">Contact Us</a>
+                    <a href="tel:2407286033" class="btn secondary">
+                        <i class="fas fa-phone"></i> (240) 728-6033
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">
-                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo" style="height: 40px;">
-                    <span class="logo-text" style="color: white;">BLUE CLIFF REVIVAL</span>
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
+                        <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                    </a>
                 </div>
-                <p class="copyright">© 2025 Blue Cliff Revival. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services/">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 12409 Hatchway Court, Woodbridge, VA 22192</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:2407286033">(240) 728-6033</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:bluecliffrevival@gmail.com">bluecliffrevival@gmail.com</a></p>
+                </div>
             </div>
+            <p class="copyright">© 2025 Blue Cliff Revival. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
