@@ -19,7 +19,24 @@ body {
     color: var(--text);
     background-color: var(--cream);
 }
+<style>
+    .centered-link {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .centered-link a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>
 
+<div class="centered-link">
+    <a href="https://c0984346.bor-d4m.pages.dev/services/">
+        BLUE CLIFF REVIVAL
+    </a>
+</div>
 .container {
     width: 100%;
     max-width: 1200px;
