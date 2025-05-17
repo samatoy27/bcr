@@ -136,6 +136,47 @@ nav {
 }
 
 /* Service Detail Page */
+
+.service-cta-section {
+    background-color: var(--cream);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--text);
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .cta-content {
+        padding: 0 20px;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
 .service-detail {
     padding: 80px 0;
 }
