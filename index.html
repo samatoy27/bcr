@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blue Cliff Revival - Professional leather repair services in Woodbridge, VA. Specializing in furniture, vehicle, and apparel leather restoration.">
     <title>Blue Cliff Revival | Leather Repair Specialists</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://bluecliffrevival.com/styles.css?v=0.94">
+    <!-- Add favicon -->
+    <link rel="icon" href="images/BLClogo.png" type="image/png">
+    <!-- Open Graph tags for better social sharing -->
+    <meta property="og:title" content="Blue Cliff Revival | Leather Repair Specialists">
+    <meta property="og:description" content="Professional leather repair services in Woodbridge, VA. Restoring furniture, vehicles, and more.">
+    <meta property="og:image" content="images/BLClogo.png">
+    <meta property="og:url" content="https://bluecliffrevival.com">
 </head>
 <body>
     <!-- Header -->
@@ -13,14 +21,16 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
-                    <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                    <a href="index.html">
+                        <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
+                        <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                    </a>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="services/">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
@@ -44,7 +54,7 @@
     </section>
 
     <!-- Services Section -->
-<section class="services-preview">
+    <section class="services-preview">
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
@@ -59,7 +69,22 @@
                         <a href="services/furniture.html" class="btn small">Learn More</a>
                     </div>
                 </div>
-                <!-- Repeat for other services -->
+                <div class="service-card">
+                    <img src="images/services/car-seat-repair.jpg" alt="Car seat leather repair">
+                    <div class="service-content">
+                        <h3>Car Seat Repair</h3>
+                        <p>Fix tears, cracks, and worn areas in your vehicle's leather upholstery.</p>
+                        <a href="services/car-seats.html" class="btn small">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/services/leather-dyeing.jpg" alt="Leather dyeing and color restoration">
+                    <div class="service-content">
+                        <h3>Color Restoration</h3>
+                        <p>Professional leather dyeing and color matching services.</p>
+                        <a href="services/color-restoration.html" class="btn small">Learn More</a>
+                    </div>
+                </div>
             </div>
             <div class="text-center">
                 <a href="services/" class="btn outline">View All Services</a>
@@ -68,53 +93,57 @@
     </section>
 
     <!-- About Section -->
-<section id="about">
-    <div class="container">
-        <div class="section-title">
-            <h2>About Us</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Quality Leather Repair</h3>
-                <p>Blue Cliff Revival was founded with a passion for restoring leather goods to their former glory. We specialize in leather repair and upholstery, including vinyls, car seats, couches, and other furniture.</p>
-                <p>We take pride in using only the highest quality materials and techniques to ensure your leather items look as good as new. Our service can be provided in your home, business, or in our workspace.</p>
-                <p>Whether it's that leather recliner you've had forever, your car seat, or your uncle's favorite leather jacket, we treat every project with the care and respect it deserves.</p>
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Quality Leather Repair</h3>
+                    <p>Blue Cliff Revival was founded with a passion for restoring leather goods to their former glory. We specialize in leather repair and upholstery, including vinyls, car seats, couches, chairs, and more.</p>
+                    <p>We take pride in using only the highest quality materials and techniques to ensure your leather items look as good as new. Our service can be provided in your home, business, or at our workshop depending on the nature of the repair.</p>
+                    <p>Whether it's that leather recliner you've had forever, your car seat, or your uncle's favorite leather jacket, we treat every project with the care and respect it deserves.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Gallery Section -->
     <section id="gallery">
         <div class="container">
             <div class="section-title">
                 <h2>Gallery</h2>
+                <p>Before and after transformations</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/leatherpanelbefore.jpg" alt="Leather repair example 1">
+                    <img src="images/leatherpanelbefore.jpg" alt="Leather panel before repair">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/leatherpanelafter.jpg" alt="Leather repair example 1">
+                    <img src="images/leatherpanelafter.jpg" alt="Leather panel after repair">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/leathercouchbefore.jpg" alt="Leather repair example 2">
+                    <img src="images/leathercouchbefore.jpg" alt="Leather couch before restoration">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/leathercouchafter.jpg" alt="Leather repair example 2">
+                    <img src="images/leathercouchafter.jpg" alt="Leather couch after restoration">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/leathercouch2before.jpg" alt="Leather repair example 3">
+                    <img src="images/leathercouch2before.jpg" alt="Damaged leather sofa before repair">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/leathercouch2after.jpg" alt="Leather repair example 3">
+                    <img src="images/leathercouch2after.jpg" alt="Repaired leather sofa after service">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/leathertypes1.jpg" alt="Leather types 1">
+                    <img src="images/leathertypes1.jpg" alt="Various leather types and textures">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/tools.jpg" alt="Tools">
+                    <img src="images/tools.jpg" alt="Professional leather repair tools">
                 </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="gallery.html" class="btn outline">View Full Gallery</a>
             </div>
         </div>
     </section>
@@ -124,20 +153,21 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contact Us</h2>
+                <p>Get in touch for a free consultation</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
                     <div class="contact-details">
                         <p><i class="fas fa-map-marker-alt"></i> 12409 Hatchway Court, Woodbridge, VA 22192</p>
-                        <p><i class="fas fa-phone"></i> 240-728-6033</p>
-                        <p><i class="fas fa-envelope"></i> bluecliffrevival@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:2407286033" style="color: inherit; text-decoration: none;">(240) 728-6033</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:bluecliffrevival@gmail.com" style="color: inherit; text-decoration: none;">bluecliffrevival@gmail.com</a></p>
                     </div>
                     <div class="business-hours">
                         <h4>Business Hours</h4>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: 10:00 AM - 4:00 PM</p>
-                        <p>Sunday: Closed</p>
+                        <p><i class="far fa-clock"></i> Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p><i class="far fa-clock"></i> Saturday: 10:00 AM - 4:00 PM</p>
+                        <p><i class="far fa-clock"></i> Sunday: Closed</p>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -169,12 +199,28 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">
+                <div class="footer-logo">
                     <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo" style="height: 40px;">
                     <span class="logo-text" style="color: white;">BLUE CLIFF REVIVAL</span>
                 </div>
-                <p class="copyright">© 2025 Blue Cliff Revival. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services/">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 12409 Hatchway Court, Woodbridge, VA 22192</p>
+                    <p><i class="fas fa-phone"></i> (240) 728-6033</p>
+                    <p><i class="fas fa-envelope"></i> bluecliffrevival@gmail.com</p>
+                </div>
             </div>
+            <p class="copyright">© 2023 Blue Cliff Revival. All Rights Reserved.</p>
         </div>
     </footer>
 
