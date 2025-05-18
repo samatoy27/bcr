@@ -983,22 +983,28 @@ section {
 /* Contact Section */
 
 /* Contact Page Styles - Add to styles.css */
-.contact-page {
-    padding: 80px 0;
-    background-color: white;
-}
 
 .contact-methods {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 50px;
     margin-bottom: 60px;
+    background-color: white;  /* Ensure container background is white */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;  /* Space between vertical elements */
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;  /* Increased gap between option boxes */
+    background-color: white;  /* White background between boxes */
 }
 
 .contact-option {
@@ -1012,16 +1018,15 @@ section {
     flex-direction: column;
     align-items: center;
     max-width: 280px;
-    margin: 0 auto;
+    margin: 10px auto;  /* Add margin around each box */
 }
 
-.contact-option:hover {
-    transform: translateY(-5px);
+/* Add margin to the individual contact option */
+.contact-page {
+    padding: 80px 0;
+    background-color: white;  /* Ensure page background is white */
 }
 
-.contact-option:hover {
-    transform: translateY(-5px);
-}
 
 .icon-circle {
     width: 70px;
