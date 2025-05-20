@@ -3,50 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Blue Cliff Revival</title>
+    <meta name="description" content="Thank you for contacting Blue Cliff Revival. We've received your message and will be in touch soon.">
+    <title>Thank You | Blue Cliff Revival - Leather Repair Specialists</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://bluecliffrevival.com/styles.css?v=1.2">
+    <link rel="stylesheet" href="https://bluecliffrevival.com/styles.css?v=1.9">
+    <!-- Add favicon -->
+    <link rel="icon" href="images/BLClogo.png" type="image/png">
     <style>
         .thank-you-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-align: center;
-            padding: 40px 20px;
-            background-color: var(--cream);
-        }
-        .thank-you-content {
-            max-width: 600px;
+            padding: 100px 0;
+            max-width: 800px;
             margin: 0 auto;
         }
-        .thank-you-content h1 {
-            color: var(--blue);
+        
+        .thank-you-icon {
+            font-size: 60px;
+            color: #27ae60;
+            margin-bottom: 30px;
+        }
+        
+        .thank-you-section h1 {
             margin-bottom: 20px;
-            font-size: 2.5rem;
-        }
-        .thank-you-content p {
-            margin-bottom: 30px;
-            font-size: 1.2rem;
-        }
-        .countdown {
-            font-size: 1.5rem;
             color: var(--blue);
-            font-weight: bold;
+        }
+        
+        .thank-you-section p {
+            font-size: 1.1rem;
             margin-bottom: 30px;
         }
-        .btn {
-            display: inline-block;
-            background-color: var(--blue);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: var(--dark-blue);
+        
+        .return-home {
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -56,9 +44,22 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
-                    <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                    <a href="index.html">
+                        <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo">
+                        <span class="logo-text">BLUE CLIFF REVIVAL</span>
+                    </a>
                 </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services/">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -66,11 +67,15 @@
     <!-- Thank You Section -->
     <section class="thank-you-section">
         <div class="container">
-            <div class="thank-you-content">
-                <h1>Thank You!</h1>
-                <p>Your message has been successfully submitted. We'll get back to you as soon as possible.</p>
-                <div class="countdown" id="countdown">Redirecting in 5 seconds...</div>
-                <a href="index.html" class="btn">Return to Homepage Now</a>
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Thank You for Contacting Us!</h1>
+            <p>Your message has been successfully sent. We've received your inquiry and will get back to you shortly.</p>
+            <p>Our team typically responds within 24-48 business hours.</p>
+            
+            <div class="return-home">
+                <a href="index.html" class="btn">Return to Homepage</a>
             </div>
         </div>
     </section>
@@ -79,28 +84,40 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">
-                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo" style="height: 40px;">
-                    <span class="logo-text" style="color: white;">BLUE CLIFF REVIVAL</span>
+                <div class="footer-column">
+                    <h3>BLUE CLIFF REVIVAL</h3>
+                    <img src="images/BLClogo.png" alt="Blue Cliff Revival Logo" style="height: 40px; margin-bottom: 15px;">
+                    <p style="color: #ccc; margin-bottom: 20px;">Bringing new life to cherished pieces through excellent craftsmanship and quality materials.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
                 </div>
-                <p class="copyright">© 2023 Blue Cliff Revival. All Rights Reserved.</p>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services/">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 12409 Hatchway Court, Woodbridge, VA 22192</li>
+                        <li><i class="fas fa-phone"></i> (240) 728-6033</li>
+                        <li><i class="fas fa-envelope"></i> bluecliffrevival@gmail.com</li>
+                    </ul>
+                </div>
             </div>
+            <p class="copyright">© 2023 Blue Cliff Revival. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Countdown timer
-        let seconds = 5;
-        const countdownElement = document.getElementById('countdown');
-        const countdownInterval = setInterval(() => {
-            seconds--;
-            countdownElement.textContent = `Redirecting in ${seconds} second${seconds !== 1 ? 's' : ''}...`;
-            
-            if (seconds <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = 'index.html';
-            }
-        }, 1000);
-    </script>
+    <script src="script.js?v=0.4" defer></script>
 </body>
 </html>
