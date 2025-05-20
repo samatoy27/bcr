@@ -143,6 +143,106 @@ nav {
 }
 
 /* Mobile Navigation */
+/* Fix for the contact page on mobile - make it centered and less clunky */
+@media (max-width: 768px) {
+    /* Improve contact options layout on mobile */
+    .contact-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .contact-option {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Center the contact form and elements */
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .contact-form-container {
+        padding: 20px;
+    }
+    
+    /* Ensure buttons are properly centered and sized */
+    .contact-button {
+        max-width: 90%;
+        margin: 10px auto;
+        justify-content: center;
+    }
+    
+    /* Fix spacing and alignment for form elements */
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    /* Better map container on mobile */
+    .map-container {
+        margin-bottom: 40px;
+    }
+    
+    .map-embed {
+        height: 300px; /* Adjust height for better viewing on mobile */
+    }
+    
+    /* Improve business hours display */
+    .business-hours-card {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .hours-grid {
+        grid-template-columns: 1fr; /* Stack hours for better readability */
+        gap: 5px;
+    }
+    
+    /* Fix contact methods layout */
+    .contact-methods {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 30px;
+    }
+    
+    /* Center contact section headings */
+    .contact-section h2, 
+    .contact-section h3,
+    .contact-form-container h2 {
+        text-align: center;
+    }
+}
+
+/* Fix for service page - remove bullet points from checkmark lists */
+.service-features {
+    margin: 20px 0;
+    padding-left: 0; /* Remove left padding that accommodates bullets */
+    list-style-type: none; /* Remove default bullet points */
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    list-style: none; /* Ensure no bullets */
+}
+
+.service-features i,
+.service-features .fa-check {
+    color: var(--blue);
+    margin-top: 3px;
+    min-width: 16px; /* Ensure consistent width for the icon */
+}
+
+/* Additional fix for any legacy styles */
+ul.service-features,
+.service-content ul {
+    list-style: none;
+    padding-left: 0;
+}
 @media (max-width: 992px) {
     .nav-links {
         position: fixed;
