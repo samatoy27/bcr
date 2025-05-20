@@ -9,6 +9,29 @@
     <link rel="stylesheet" href="https://bluecliffrevival.com/styles.css?v=1.9">
     <!-- Add favicon -->
     <link rel="icon" href="images/BLClogo.png" type="image/png">
+    <style>
+        /* Additional styles for file upload field */
+        .photo-upload input[type="file"] {
+            border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            width: 100%;
+        }
+        
+        .photo-upload input[type="file"]:required {
+            border-left: 3px solid #e74c3c;
+        }
+        
+        .photo-upload input[type="file"]:valid {
+            border-left: 3px solid #27ae60;
+        }
+        
+        .photo-upload input[type="file"]:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -112,28 +135,31 @@
                     <h2>Get a Free Quote</h2>
                     <p class="form-intro">Please provide details about your repair needs, and we'll get back to you quickly with a free estimate.</p>
                     
-                    <form action="https://formspree.io/f/xqaqjljg" method="POST" id="contactForm" class="enhanced-form">
+                    <form action="https://formspree.io/f/xqaqjljg" method="POST" enctype="multipart/form-data" id="contactForm" class="enhanced-form">
+                        <!-- Hidden field for redirect -->
+                        <input type="hidden" name="_next" value="https://bluecliffrevival.com/thanks.html">
+                        
                         <div class="form-group">
                             <label for="name">Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" class="form-control" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone">
+                                <label for="phone">Phone <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service...</option>
+                            <label for="service">Service Needed <span class="required">*</span></label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="" disabled selected>Select a service...</option>
                                 <option value="Furniture Repair">Furniture Repair</option>
                                 <option value="Car Seat Repair">Car Seat Repair</option>
                                 <option value="Color Restoration">Color Restoration</option>
@@ -144,13 +170,13 @@
                         
                         <div class="form-group">
                             <label for="message">Message <span class="required">*</span></label>
-                            <textarea id="message" name="message" required placeholder="Please describe your repair needs, including the type of item, the nature of the damage, and any other relevant details."></textarea>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Please describe your repair needs, including the type of item, the nature of the damage, and any other relevant details."></textarea>
                         </div>
                         
                         <div class="form-group photo-upload">
-                            <label for="photos">Photos</label>
-                            <p class="form-help">Photos help us provide a more accurate quote.</p>
-                            <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                            <label for="photos">Photos <span class="required">*</span></label>
+                            <p class="form-help">Please upload clear photos of the item that needs repair.</p>
+                            <input type="file" id="photos" name="photos" accept="image/*" multiple required>
                         </div>
                         
                         <div class="form-group">
