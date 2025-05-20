@@ -439,6 +439,61 @@ section {
     color: var(--blue);
     margin-bottom: 15px;
 }
+/* Service card text alignment and button positioning */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center; /* Center all text in service cards */
+    padding-bottom: 20px; /* Add padding at bottom for button space */
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    flex-grow: 1;
+    text-align: center; /* Ensure all text is centered */
+}
+
+.service-content h3 {
+    margin-bottom: 15px;
+    color: var(--blue);
+    font-size: 1.5rem;
+    justify-content: center; /* Center any flex items in the heading */
+}
+
+.service-content p {
+    margin-bottom: 20px;
+    flex-grow: 1; /* Make paragraph take up available space */
+}
+
+.service-content .btn {
+    margin-top: auto; /* Push button to bottom */
+    align-self: center; /* Center the button horizontally */
+}
+
+/* Ensure even spacing */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Make sure cards are the same height */
+.service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix button width to be consistent */
+.service-content .btn {
+    width: 80%; /* Set a consistent width */
+    max-width: 200px;
+}
 
 /* Gallery */
 .gallery-grid {
