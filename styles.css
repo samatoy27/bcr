@@ -1683,3 +1683,28 @@ footer {
         display: block;
     }
 }
+
+@media (max-width: 768px) {
+    .service-category {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .service-category .service-image {
+        order: -1; /* Always shows image first */
+    }
+    
+    .service-category.reverse .service-image {
+        order: -1; /* Even for reverse layouts, image is first on mobile */
+    }
+    
+    /* Apply to other side-by-side layouts */
+    .about-story {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about-story .about-image {
+        order: -1;
+    }
+}
