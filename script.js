@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
         mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
         
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', function() {
             const isExpanded = navLinks.classList.contains('active');
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = isExpanded ? 
