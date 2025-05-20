@@ -1257,6 +1257,35 @@ section.white-bg .contact-option {
 }
 
 /* Contact Form */
+/* Style for the file upload field to make it more visible that it's required */
+input[type="file"] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type="file"]:required {
+  border-left: 3px solid #e74c3c;
+}
+
+/* Add a visual indicator for required fields */
+.required {
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+/* Style for file input when it's valid/has a file selected */
+input[type="file"]:valid {
+  border-left: 3px solid #27ae60;
+}
+
+/* Add focus styles for better accessibility */
+input[type="file"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
 .contact-form {
     background-color: white;
     border-radius: 10px;
