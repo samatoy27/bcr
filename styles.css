@@ -779,7 +779,7 @@ section {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    background: #f5f5f5;
+    background: white;
     aspect-ratio: 4/3;
     cursor: pointer;
 }
