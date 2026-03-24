@@ -741,19 +741,22 @@ section {
 .gallery-cta {
     background-color: var(--blue);
     color: white;
-    /* Reduced top padding from 40px to 20px to fix the empty space */
-    padding: 20px 40px 40px 40px; 
+    padding: 40px 30px; /* Standard, balanced padding */
     border-radius: 8px;
     text-align: center;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 40px;
+    /* Removed flexbox here so it just wraps tightly around the text */
 }
 
 .gallery-cta h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    color: white !important; /* Forces the invisible text to show up! */
+}
+
+/* If the heading is actually empty, this completely deletes the blank space */
+.gallery-cta h3:empty {
+    display: none;
 }
 
 .gallery-cta p {
@@ -762,11 +765,6 @@ section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* If the h3 is missing, this adds a little breathing room to the top of the paragraph */
-.gallery-cta p:first-child {
-    margin-top: 15px;
 }
 /* ----- END UPDATED CALL TO ACTION FIX ----- */
 
