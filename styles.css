@@ -680,9 +680,11 @@ section {
     text-align: center;
 }
 
+/* ----- UPDATED GALLERY GRID LAYOUT ----- */
 .image-comparison {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* This perfectly centers the 5th odd image */
     gap: 30px;
     margin-bottom: 20px;
 }
@@ -692,15 +694,17 @@ section {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(50% - 15px); /* Forces two items per row minus gap */
+    min-width: 250px; /* Prevents getting too small on shrinking screens */
 }
 
 .before img, .after img {
     width: 100%;
-    height: 100%;
+    height: 400px; /* Forces all images (furniture, cars, vinyl) to be exact same size */
     object-fit: cover;
     display: block;
-    aspect-ratio: 4/3;
 }
+/* ----- END UPDATED GALLERY GRID LAYOUT ----- */
 
 .label {
     position: absolute;
@@ -752,9 +756,19 @@ section {
 }
 
 @media (max-width: 768px) {
+    /* Updated media query for the flex layout to stack cleanly on mobile */
     .image-comparison {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 20px;
+    }
+    
+    .before, .after {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .before img, .after img {
+        height: 300px; /* Slightly shorter on mobile so it fits the screen better */
     }
     
     .before-after-pair {
@@ -1569,11 +1583,6 @@ footer {
     
     .leave-review-cta {
         padding: 30px 20px;
-    }
-    
-    .image-comparison {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
     
     .hero-btns {
