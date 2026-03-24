@@ -539,6 +539,7 @@ section {
     color: var(--blue);
     margin-bottom: 15px;
 }
+
 /* Service card text alignment and button positioning */
 .service-card {
     display: flex;
@@ -626,6 +627,7 @@ section {
 .gallery-item:hover img {
     transform: scale(1.05);
 }
+
 .gallery-categories {
     padding: 80px 0;
     background-color: white;
@@ -685,7 +687,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    gap: 20px; /* Reduced gap slightly for safer math */
+    gap: 20px; 
     margin-bottom: 20px;
 }
 
@@ -694,10 +696,10 @@ section {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    /* Guarantees 2 per row by allowing them to shrink, but capping width */
-    flex: 1 1 calc(50% - 20px); 
-    max-width: calc(50% - 10px); 
-    min-width: 250px; 
+    /* This forces the images to be exactly 50% minus half the gap */
+    /* No min-width prevents premature wrapping! */
+    flex: 0 0 calc(50% - 10px); 
+    max-width: calc(50% - 10px);
 }
 
 .before img, .after img {
@@ -735,13 +737,18 @@ section {
     line-height: 1.7;
 }
 
+/* ----- UPDATED CALL TO ACTION FIX ----- */
 .gallery-cta {
     background-color: var(--blue);
     color: white;
-    padding: 40px;
+    /* Reduced top padding from 40px to 20px to fix the empty space */
+    padding: 20px 40px 40px 40px; 
     border-radius: 8px;
     text-align: center;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .gallery-cta h3 {
@@ -757,34 +764,12 @@ section {
     margin-right: auto;
 }
 
-@media (max-width: 768px) {
-    /* Updated media query for the flex layout to stack cleanly on mobile */
-    .image-comparison {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .before, .after {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    
-    .before img, .after img {
-        height: 300px; /* Slightly shorter on mobile so it fits the screen better */
-    }
-    
-    .before-after-pair {
-        padding: 20px;
-    }
-    
-    .before-after-pair h3 {
-        font-size: 1.4rem;
-    }
-    
-    .gallery-cta {
-        padding: 30px 20px;
-    }
+/* If the h3 is missing, this adds a little breathing room to the top of the paragraph */
+.gallery-cta p:first-child {
+    margin-top: 15px;
 }
+/* ----- END UPDATED CALL TO ACTION FIX ----- */
+
 /* Reviews */
 .reviews-section {
     background-color: white;
@@ -1302,6 +1287,7 @@ input[type="file"]:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
+
 .contact-form {
     background-color: white;
     border-radius: 10px;
@@ -1442,6 +1428,7 @@ textarea.form-control {
     margin-bottom: 30px;
 }
 
+/* ----- CTA BUTTON LAYOUT FIX ----- */
 .cta-buttons {
     display: flex;
     flex-direction: row; /* Forces them side-by-side on desktop */
@@ -1461,6 +1448,7 @@ textarea.form-control {
     background-color: transparent;
     color: white;
 }
+/* ----- END CTA BUTTON LAYOUT FIX ----- */
 
 /* Service CTA Section */
 .service-cta-section {
@@ -1543,16 +1531,27 @@ footer {
 
 /* Responsive Mobile Fixes */
 @media (max-width: 768px) {
+    /* ----- ENSURE STACKING ON MOBILE ----- */
     /* Stack images on mobile */
+    .image-comparison {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
     .before, .after {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
         max-width: 100%;
+    }
+    
+    .before img, .after img {
+        height: 300px; /* Slightly shorter on mobile so it fits the screen better */
     }
     
     /* Stack buttons on mobile */
     .cta-buttons {
         flex-direction: column; 
     }
+    /* ----- END MOBILE STACKING OVERRIDES ----- */
     
     .service-category {
         display: flex;
@@ -1619,6 +1618,18 @@ footer {
     
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    
+    .before-after-pair {
+        padding: 20px;
+    }
+    
+    .before-after-pair h3 {
+        font-size: 1.4rem;
+    }
+    
+    .gallery-cta {
+        padding: 30px 20px;
     }
 }
 
