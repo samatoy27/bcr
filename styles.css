@@ -696,8 +696,6 @@ section {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    /* This forces the images to be exactly 50% minus half the gap */
-    /* No min-width prevents premature wrapping! */
     flex: 0 0 calc(50% - 10px); 
     max-width: calc(50% - 10px);
 }
@@ -745,13 +743,12 @@ section {
     border-radius: 8px;
     text-align: center;
     margin-top: 40px;
-    /* Removed flexbox here so it just wraps tightly around the text */
 }
 
 .gallery-cta h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: white !important; /* Forces the invisible text to show up! */
+    color: white !important; /* Forces the text to show up! */
 }
 
 /* If the heading is actually empty, this completely deletes the blank space */
@@ -1530,19 +1527,22 @@ footer {
 /* Responsive Mobile Fixes */
 @media (max-width: 768px) {
     /* ----- ENSURE STACKING ON MOBILE ----- */
-    /* Stack images on mobile */
     .image-comparison {
         flex-direction: column;
         gap: 20px;
+        width: 100%; /* Ensures the container takes full width */
     }
     
     .before, .after {
-        flex: 0 0 100%;
+        width: 100%; /* Forces the box to stretch across the screen */
+        flex: none;  /* Removes the flex rule that was squishing them */
         max-width: 100%;
     }
     
     .before img, .after img {
-        height: 300px; /* Slightly shorter on mobile so it fits the screen better */
+        height: 300px; 
+        width: 100%; /* Ensures the image fills the fixed box */
+        object-fit: cover;
     }
     
     /* Stack buttons on mobile */
