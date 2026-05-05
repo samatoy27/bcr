@@ -275,7 +275,8 @@ ul.service-features,
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 0; /* remove old margin */
+    padding-top: 140px; /* header ~80px + banner ~60px */
 }
 
 .hero-section {
@@ -1580,14 +1581,13 @@ footer {
 
     /* Service Notice Banner Styles */
 .service-notice-banner {
-    background-color: #fce8e9; /* Light alert red */
-    color: #721c24; /* Dark contrast red */
-    padding: 15px 0;
-    border-bottom: 2px solid #f5c6cb;
-    margin-top: 80px; /* Matches your header height to sit right below it */
+    background-color: #23313e;
+    color: white;
+    padding: 14px 0;
+    border-bottom: 3px solid #c0392b;
+    margin-top: 0; /* remove the 80px */
     position: relative;
     z-index: 999;
-    text-align: center;
 }
 
 .notice-content {
@@ -1619,6 +1619,12 @@ footer {
 
 .notice-content a:hover {
     color: #000;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 180px; /* more room since banner text wraps */
+    }
 }
 
 /* Mobile Adjustment for Banner */
