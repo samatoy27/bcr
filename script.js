@@ -415,9 +415,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add active class to current nav item
     const currentPage = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinkitems = document.querySelectorAll('.nav-links a');
     
-    navLinks.forEach(link => {
+    navLinkItems.forEach(link => {
         const linkPath = link.getAttribute('href');
         
         // Check if it's the home page
