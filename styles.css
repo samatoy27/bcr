@@ -1477,7 +1477,7 @@ footer {
         transition: transform 0.3s ease-in-out, opacity 0.3s ease;
         transform: translateY(-150%);
         opacity: 0;
-        z-index: 100;
+        z-index: 999;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
