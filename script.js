@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add active class to current nav item
     const currentPage = window.location.pathname;
-    const navLinkitems = document.querySelectorAll('.nav-links a');
+    const navLinkItems = document.querySelectorAll('.nav-links a');
     
     navLinkItems.forEach(link => {
         const linkPath = link.getAttribute('href');
